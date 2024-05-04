@@ -2,14 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Todo from './Todo'
 
 function App() {
 
   return (
     <>
 
-      <h1>Vite + React</h1>
-      <Device name="laptop" price="20"></Device>
+      <h3>Vite + React</h3>
+      <Todo task="Learn React" isDone={true}></Todo>
+      <Todo task="core Concepts" isDone={false}></Todo>
+      <Todo task="Try Jsx" isDone={true}></Todo>
+      {/* <Device name="laptop" price="20"></Device>
       <Device name="phone" price="230"></Device>
       <Device name="watch" price="50"></Device>
       <Device name="watch" price="50"></Device>
@@ -17,7 +21,7 @@ function App() {
       <Student grade="7" score="99"></Student>
       <Student></Student>
       <Student></Student>
-      <Developer></Developer>
+      <Developer></Developer> */}
     </>
   )
 }
@@ -25,7 +29,7 @@ function App() {
 
 
 
-function Device({name, price}){
+function Device({ name, price }) {
   return <h2>This device: {name}, price:{price}</h2>
 }
 
@@ -56,7 +60,7 @@ function Person() {
 
 
 
-function Student({grade=1, score=0}) {
+function Student({ grade = 1, score = 0 }) {
   return (
     <div className="student">
       <h2>This is a Student Function</h2>
@@ -67,7 +71,7 @@ function Student({grade=1, score=0}) {
 }
 
 
-function Developer(){
+function Developer() {
   const developerStyle = {
     margin: '20px',
     padding: '20px',
