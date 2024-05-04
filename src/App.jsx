@@ -5,28 +5,40 @@ import './App.css'
 import Todo from './Todo'
 import Actor from './Actor'
 import Singers from './Singers'
+import BookStore from './BookStore'
 
 function App() {
 
   const actors = ["Sakib", "Raj", "Jasim", "Rubel"];
   const singers = [
     {id: 1, name: "anik", age: 24},
-    {id: 2, name: "anik", age: 24},
-    {id: 3, name: "anik", age: 24},
-    {id: 4, name: "anik", age: 24}
+    {id: 2, name: "apu", age: 22},
+    {id: 3, name: "arpon", age: 17},
+    {id: 4, name: "joy", age: 15}
+  ]
+
+  const books = [
+    {id:1, name: "Math", price: 120},
+    {id:2, name: "English", price: 100},
+    {id:1, name: "Bangla", price: 90},
   ]
 
   return (
     <>
 
       <h3>Vite + React</h3>
-      <Actor name={"Bapa Raz"}></Actor>
+
+    <BookStore books={books}></BookStore>
+
+
+
+      {/* <Actor name={"Bapa Raz"}></Actor>
       {
         actors.map(actor => <Actor name={actor}></Actor>)
       }
       {
         singers.map(singer => <Singers singer={singer}></Singers>)
-      }
+      } */}
       {/* <Todo task="Learn React" isDone={true}></Todo>
       <Todo task="core Concepts" isDone={false}></Todo>
       <Todo task="Try Jsx" isDone={true}></Todo> */}
